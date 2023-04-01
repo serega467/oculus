@@ -216,6 +216,7 @@ body {
   gap: 40px;
   opacity: 0;
   position: absolute;
+  transition: opacaty .3s ease;
 }
 
 .tabs__content-item--active {
@@ -227,7 +228,7 @@ body {
   align-self: stretch;
 }
 
-.tabs__content-box h3{
+.tabs__content-box h3 {
   font-weight: 400;
   font-size: 24px;
   margin-bottom: 5px;
@@ -246,7 +247,7 @@ body {
   justify-content: end;
   align-items: flex-start;
   padding: 9px 10px;
-  
+
 }
 
 .video span {
@@ -256,4 +257,190 @@ body {
 
 .video__btn {
   margin-left: 22px;
+}
+
+/* Game section */
+.game {
+  margin-bottom: 100px;
+}
+
+.game__title {
+  margin-bottom: 50px;
+}
+
+.container {}
+
+.section-title {}
+
+.game__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.game__descr {
+  padding-right: 10px;
+}
+
+.game__descr-title {
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.game__descr-text {
+  margin-bottom: 24px;
+}
+
+.game__link {
+  display: inline-block;
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 16px 15px 12px;
+  border: 1px solid #bc10d8;
+}
+
+.game__item {
+  border: 1px solid #bc10d8;
+  padding: 10px 20px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.game__item-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.game__item-text {
+  margin-bottom: 30px;
+}
+
+.game__item-link {
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: auto;
+}
+
+.game__item-img {
+  margin-bottom: 10px;
+}
+
+/* BUY */
+.buy {
+  margin-bottom: 110px;
+  text-align: center;
+  position: relative;
+  /*убираем горизонтальный скролл
+  который появляется при анимации oculus*/
+  overflow-x: hidden;
+}
+
+.buy__bg {
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.1;
+  font-weight: 700;
+  font-size: 400px;
+  line-height: 400px; /*изменение этого свойства позволяет поднимать
+  или опускать надпись oculus*/
+  position: absolute;
+  z-index: -1;
+  animation: line-text 6s linear 1s infinite;
+}
+
+.buy__img {
+  margin-bottom: 30px;
+}
+
+.buy .buy-btn {
+  margin: 0 auto;
+
+}
+
+
+
+/*создаем анимацию oculus*/
+@keyframes line-text {
+  from {
+    transform: translateX(115%);
+  }
+  to {
+    transform: translateX(-115%);
+  }
+}
+
+/* Equipment */
+.equipment {
+  margin-bottom: 100px;
+}
+.container {
+}
+.equipment__title {
+  margin-bottom: 50px;
+}
+.section-title {
+}
+.equipment__box {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+.equipment__box-item {
+}
+.equipment__box-item--one {
+  grid-row: 1/-1;
+}
+.equipment__box-img {
+  margin-bottom: 10px;
+}
+.equipment__box-text {
+
+}
+.equipment__box-title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 50px;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.promo {
+  margin-bottom: 100px;
+}
+
+.promo__inner {
+  background-image: url(../images/promo-bg.jpg);
+  min-height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  position: relative;
+}
+
+.promo__btn {
+  font-weight: 700;
+  color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
 }
